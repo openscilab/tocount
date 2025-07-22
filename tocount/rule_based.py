@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """Rule based tokens estimator functions."""
 
-
 import re
 from typing import Set, List
 from .keywords import PROGRAMMING_LANGUAGES_KEYWORDS
