@@ -33,4 +33,4 @@ def estimate_text_tokens(text: str, estimator: TextEstimator = TextEstimator.DEF
         raise ValueError(INVALID_TEXT_MESSAGE)
     if not isinstance(estimator, TextEstimator):
         raise ValueError(INVALID_TEXT_ESTIMATOR_MESSAGE)
-    return text_estimator_map[estimator](text=text)
+    return text_estimator_map[estimator](text)
