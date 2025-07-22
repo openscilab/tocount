@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>ToCount: TODO ...</h1>
+    <h1>ToCount: Lightweight Token Estimator</h1>
     <br/>
     <a href="https://badge.fury.io/py/tocount"><img src="https://badge.fury.io/py/tocount.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
@@ -11,7 +11,7 @@
 
 ## Overview
 <p align="justify">
-TODO ...
+ToCount is a lightweight and extensible Python library for estimating token counts from text inputs using both rule-based and machine learning methods. Designed for flexibility, speed, and accuracy, ToCount provides a unified interface for different estimation strategies, making it ideal for tasks like prompt analysis, token budgeting, and optimizing interactions with token-based systems.
 </p>
 <table>
     <tr>
@@ -47,13 +47,6 @@ TODO ...
             </td>
     </tr>
 </table>
-<table>
-    <tr> 
-        <td align="center">Code Quality</td>
-        <td align="center">--</td>
-        <td align="center">--</td>
-    </tr>
-</table>
 
 
 ## Installation
@@ -67,7 +60,11 @@ TODO ...
 
 ## Usage
 
-TODO ...
+```pycon
+>>> from tocount import estimate_text_tokens, TextEstimator
+>>> estimate_text_tokens("How are you?", estimator=TextEstimator.RULE_BASED_UNIVERSAL)
+4
+```
 
 ## Issues & bug reports
 
