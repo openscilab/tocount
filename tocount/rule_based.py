@@ -4,8 +4,8 @@
 
 import re
 from typing import Set, List
-from .params import PROGRAMMING_LANGUAGES_KEYWORDS
-from .params import COMMON_PREFIXES, COMMON_SUFFIXES
+from .keywords import PROGRAMMING_LANGUAGES_KEYWORDS
+from .keywords import COMMON_PREFIXES, COMMON_SUFFIXES
 
 
 def _is_code_snippet(message: str) -> bool:
