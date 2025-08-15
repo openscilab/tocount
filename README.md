@@ -1,5 +1,3 @@
-# tocount
-
 <div align="center">
     <h1>ToCount: Lightweight Token Estimator</h1>
     <br/>
