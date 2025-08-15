@@ -14,14 +14,6 @@
 ToCount is a lightweight and extensible Python library for estimating token counts from text inputs using both rule-based and machine learning methods. Designed for flexibility, speed, and accuracy, ToCount provides a unified interface for different estimation strategies, making it ideal for tasks like prompt analysis, token budgeting, and optimizing interactions with token-based systems.
 </p>
 
-## Models
-
-| Model Name               | Type        |   MAE   |     MSE     |   R²   |
-|--------------------------|-------------|---------|-------------|--------|
-| RULE_BASED_UNIVERSAL     | Rule-Based  | 106.70  | 381,647.81  | 0.8175 |
-| RULE_BASED_GPT_4         | Rule-Based  | 152.34  | 571,795.89  | 0.7266 |
-| RULE_BASED_GPT_3_5       | Rule-Based  | 161.93  | 652,923.59  | 0.6878 |
-
 <table>
     <tr>
         <td align="center">PyPI Counter</td>
@@ -66,6 +58,14 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 ### Source code
 - Download [Version 0.1](https://github.com/openscilab/tocount/archive/v0.1.zip) or [Latest Source](https://github.com/openscilab/tocount/archive/dev.zip)
 - Run `pip install .`
+
+## Models
+
+| Model Name               | Type        |   MAE   |     MSE     |   R²   |
+|--------------------------|-------------|---------|-------------|--------|
+| RULE_BASED_UNIVERSAL     | Rule-Based  | 106.70  | 381,647.81  | 0.8175 |
+| RULE_BASED_GPT_4         | Rule-Based  | 152.34  | 571,795.89  | 0.7266 |
+| RULE_BASED_GPT_3_5       | Rule-Based  | 161.93  | 652,923.59  | 0.6878 |
 
 ## Usage
 
