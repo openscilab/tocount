@@ -1,5 +1,5 @@
 import pytest
-from tocount import universal_tokens_estimator, openai_tokens_estimator_gpt_3_5, openai_tokens_estimator_gpt_4
+from tocount.rule_based import universal_tokens_estimator, openai_tokens_estimator_gpt_3_5, openai_tokens_estimator_gpt_4
 
 
 def test_universal_text_with_simple_prompt():
