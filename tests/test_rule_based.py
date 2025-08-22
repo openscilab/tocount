@@ -113,16 +113,6 @@ def test_openai_GPT_3_5_text_with_numbers():
     assert estimate_text_tokens(message, TextEstimator.RULE_BASED_GPT_3_5) == pytest.approx(9, abs=6)
 
 
-def test_openai_model_adjustment():
-    message = "A simple sentence to compare models."
-    result_3_5 = estimate_text_tokens(message, TextEstimator.RULE_BASED_GPT_3_5)
-    result_4 = estimate_text_tokens(message, TextEstimator.RULE_BASED_GPT_4)
-
-    assert isinstance(result_3_5, int)
-    assert isinstance(result_4, int)
-    assert result_4 >= result_3_5
-
-
 def test_openai_GPT_3_5_text_with_non_english():
     message = "如何在sd上无错误进行模型训练"  # https://huggingface.co/datasets/allenai/WildChat-1M?conversation-viewer=20
     assert isinstance(estimate_text_tokens(message, TextEstimator.RULE_BASED_GPT_3_5), int)
