@@ -51,3 +51,7 @@ jobs:
           python -m vulture tocount/ setup.py --min-confidence 80 --sort-by-size
           python -m bandit -r tocount
           python -m pydocstyle tocount
+      - name: Version check
+        run: |
+          python otherfiles/version_check.py
+        if: matrix.python-version == env.TEST_PYTHON_VERSION
