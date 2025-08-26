@@ -81,6 +81,11 @@ Just fill an issue and describe it. We'll check it ASAP! or send an email to [to
 
 - Please complete the issue template
 
+## References
+
+<blockquote>1- Zheng, Lianmin, et al. "Lmsys-chat-1m: A large-scale real-world llm conversation dataset." International Conference on Learning Representations (ICLR) 2024 Spotlights.</blockquote>
+
+<blockquote>2- Zhao, Wenting, et al. "Wildchat: 1m chatgpt interaction logs in the wild." International Conference on Learning Representations (ICLR) 2024 Spotlights.</blockquote>
 
 ## Show your support
 
