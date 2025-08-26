@@ -67,6 +67,8 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 | RULE_BASED_GPT_4         | Rule-Based  | 152.34  | 571,795.89  | 0.7266 |
 | RULE_BASED_GPT_3_5       | Rule-Based  | 161.93  | 652,923.59  | 0.6878 |
 
+The training and testing dataset is taken from Lmsys-chat-1m [1] and Wildchat [2].
+
 ## Usage
 
 ```pycon
