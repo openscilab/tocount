@@ -9,6 +9,7 @@ from .params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
 
 class _TextEstimatorRuleBased(Enum):
     """Rule based text token estimator enum."""
+
     UNIVERSAL = "RULE BASED UNIVERSAL"
     GPT_3_5 = "RULE BASED GPT 3.5"
     GPT_4 = "RULE BASED GPT 4"
