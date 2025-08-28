@@ -14,8 +14,8 @@ class _TextEstimatorRuleBased(Enum):
     GPT_4 = "RULE BASED GPT 4"
     DEFAULT = UNIVERSAL
 
-class TextEstimator(Enum):
-    """Text token estimator enum."""
+class TextEstimator:
+    """Text token estimator class."""
 
     RULE_BASED = _TextEstimatorRuleBased
     DEFAULT = RULE_BASED.DEFAULT
