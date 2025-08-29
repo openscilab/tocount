@@ -15,21 +15,23 @@ requirements:
     host:
         - pip
         - setuptools
-        - python >=3.6
+        - python >=3.7
     run:
-        - python >=3.6
+        - python >=3.7
 about:
     home: https://github.com/openscilab/tocount
     license: MIT
     license_family: MIT
-    summary: ToCount: TODO
+    summary: ToCount: Lightweight Token Estimator
     description: |
-	TODO
-	
+	    ToCount is a lightweight and extensible Python library for estimating token counts from text inputs using both rule-based and machine learning methods.
+        Designed for flexibility, speed, and accuracy, ToCount provides a unified interface for different estimation strategies, making it ideal for tasks like prompt analysis,
+        token budgeting, and optimizing interactions with token-based systems.
+        
         Website: https://openscilab.com
 
         Repo: https://github.com/openscilab/tocount
 extra:
     recipe-maintainers:
-        - alirezazolanvari
+        - sadrasabouri
         - sepandhaghighi
