@@ -2,6 +2,7 @@
     <h1>ToCount: Lightweight Token Estimator</h1>
     <br/>
     <a href="https://badge.fury.io/py/tocount"><img src="https://badge.fury.io/py/tocount.svg" alt="PyPI version"></a>
+    <a href="https://codecov.io/gh/openscilab/tocount"><img src="https://codecov.io/gh/openscilab/tocount/branch/dev/graph/badge.svg?token=T9T0EPB3V2"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
     <a href="https://github.com/openscilab/tocount"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/tocount"></a>
 </div>
@@ -99,4 +100,4 @@ Give a ⭐️ if this project helped you!
 ### Donate to our project
 If you do like our project and we hope that you do, can you please support us? Our project is not and is never going to be working for profit. We need the money just so we can continue doing what we do ;-) .			
 
-<a href="https://openscilab.com/#donation" target="_blank"><img src="https://github.com/openscilab/tocount/raw/main/otherfiles/donation.png" height="90px" width="270px" alt="ToCount Donation"></a>
+<a href="https://openscilab.com/#donation" target="_blank"><img src="https://github.com/openscilab/tocount/raw/main/otherfiles/donation.png" width="270" alt="ToCount Donation"></a>

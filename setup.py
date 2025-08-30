@@ -23,7 +23,9 @@ def read_description() -> str:
             description += c.read()
         return description
     except Exception:
-        return '''TODO'''
+        return '''ToCount is a lightweight and extensible Python library for estimating token counts from text inputs using both rule-based and machine learning methods.
+        Designed for flexibility, speed, and accuracy, ToCount provides a unified interface for different estimation strategies, making it ideal for tasks like prompt analysis,
+        token budgeting, and optimizing interactions with token-based systems.'''
 
 
 setup(
@@ -31,25 +33,24 @@ setup(
     packages=[
         'tocount', ],
     version='0.1',
-    description='TODO',
+    description='ToCount: Lightweight Token Estimator',
     long_description=read_description(),
     long_description_content_type='text/markdown',
     author='ToCount Development Team',
     author_email='tocount@openscilab.com',
     url='https://github.com/openscilab/tocount',
     download_url='https://github.com/openscilab/tocount/tarball/v0.1',
-    keywords="TODO",
+    keywords="token tokenizer estimation llm ml nlp",
     project_urls={
             'Source': 'https://github.com/openscilab/tocount',
     },
     install_requires=get_requires(),
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 2 - Pre-Alpha',
         'Natural Language :: English',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
