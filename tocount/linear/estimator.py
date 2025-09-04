@@ -3,11 +3,11 @@ from ..params import LINEAR_MODELS
 
 def linear_tokens_estimator(text: str, model: str = "English") -> int:
     """
-    linear token estimator:
-    
-    :param text: input text
-    :param model: model name (case-insensitive), must exist in params.LINEAR_MODELS
-    :return: token estimate
+    Linear token estimator.
+
+    :param text: Input text.
+    :param model: Model name (case-insensitive), must exist in params.LINEAR_MODELS.
+    :return: Token estimate as an integer.
     """
     key = (model).strip().lower()
     if key not in LINEAR_MODELS:
