@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-"""tocount functions."""
+"""Tocount functions."""
 from enum import Enum
+
 from .rule_based import universal_tokens_estimator
 from .rule_based import openai_tokens_estimator_gpt_3_5
 from .rule_based import openai_tokens_estimator_gpt_4
-from .params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
+from ..params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
 
 
 class _TextEstimatorRuleBased(Enum):
