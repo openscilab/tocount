@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
+"""Tocount functions."""
 from ..params import LINEAR_MODELS
-"""Linear token estimator."""
 
 def linear_tokens_estimator(text: str, model: str = "English") -> int:
     """
