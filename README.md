@@ -62,11 +62,21 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 
 ## Models
 
-| Model Name                 | Type        |   MAE   |     MSE     |   R²   |
-|----------------------------|-------------|---------|-------------|--------|
-| `RULE_BASED.UNIVERSAL`     | Rule-Based  | 106.70  | 381,647.81  | 0.8175 |
-| `RULE_BASED.GPT_4`         | Rule-Based  | 152.34  | 571,795.89  | 0.7266 |
-| `RULE_BASED.GPT_3_5`       | Rule-Based  | 161.93  | 652,923.59  | 0.6878 |
+### Heuristic models
+
+| Model Name                 |   MAE   |     MSE     |   R²   |
+|----------------------------|---------|-------------|--------|
+| `RULE_BASED.UNIVERSAL`     | 106.70  | 381,647.81  | 0.8175 |
+| `RULE_BASED.GPT_4`         | 152.34  | 571,795.89  | 0.7266 |
+| `RULE_BASED.GPT_3_5`       | 161.93  | 652,923.59  | 0.6878 |
+
+### Linear models
+
+| Model Name                 |   MAE   |     MSE     |   R²   |
+|----------------------------|---------|-------------|--------|
+| `Liner model(all)`         |  71.38  |  183897.01  | 0.8941 |
+| `Linear model(english)`    |  23.35  |  14127.92   | 0.9887 |
+
 
 ℹ️ The training and testing dataset is taken from Lmsys-chat-1m [1] and Wildchat [2].
 
