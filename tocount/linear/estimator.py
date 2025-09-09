@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Tocount functions."""
-from ..params import LINEAR_MODELS, INVALID_LINEAR_MODEL_MESSAGE
+from ..params import LINEAR_MODELS
 
 def linear_tokens_estimator(text: str, model: str = "English") -> int:
     """
