@@ -72,10 +72,10 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 
 ### Linear models
 
-| Model Name                 |   MAE   |     MSE     |   R²   |
-|----------------------------|---------|-------------|--------|
-| `Liner model(all)`         |  71.38  |  183897.01  | 0.8941 |
-| `Linear model(english)`    |  23.35  |  14127.92   | 0.9887 |
+| Model Name                                      |   MAE   |     MSE     |   R²   |
+|-------------------------------------------------|---------|-------------|--------|
+| `TextEstimator.TIKTOKEN_R50K.LINEAR_ALL`        |  71.38  |  183897.01  | 0.8941 |
+| `TextEstimator.TIKTOKEN_R50K.LINEAR_ENGLISH`    |  23.35  |  14127.92   | 0.9887 |
 
 
 ℹ️ The training and testing dataset is taken from Lmsys-chat-1m [1] and Wildchat [2].
