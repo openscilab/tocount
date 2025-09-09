@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Tocount functions."""
-from ..params import LINEAR_MODELS
+from ..params import LINEAR_MODELS, INVALID_LINEAR_MODEL_MESSAGE
 
 def linear_tokens_estimator(text: str, model: str = "English") -> int:
     """
@@ -11,8 +11,6 @@ def linear_tokens_estimator(text: str, model: str = "English") -> int:
     :return: Token estimate as an integer.
     """
     key = (model).strip().lower()
-    if key not in LINEAR_MODELS:
-        raise ValueError(f"Unknown linear model '{model}'.")
 
     p = LINEAR_MODELS[key]
     a = float(p["a"])
