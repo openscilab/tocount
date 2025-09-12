@@ -3,8 +3,8 @@
 from enum import Enum
 
 from .params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
-from .heuristic.rule_based import universal_tokens_estimator, openai_tokens_estimator_gpt_3_5, openai_tokens_estimator_gpt_4
-from .linear.estimator import linear_tokens_estimator
+from .rule_based.functions import universal_tokens_estimator, openai_tokens_estimator_gpt_3_5, openai_tokens_estimator_gpt_4
+from .tiktoken_r50.functions import linear_tokens_estimator
 
 
 class _TextEstimatorRuleBased(Enum):
