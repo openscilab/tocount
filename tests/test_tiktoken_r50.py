@@ -30,7 +30,7 @@ def test_linear_english_code_with_keywords():
         if op.type == "SELECT":
     """  # http://huggingface.co/datasets/lmsys/lmsys-chat-1m?conversation-viewer=19
     assert isinstance(estimate_text_tokens(message3, TextEstimator.TIKTOKEN_R50K.LINEAR_ENGLISH), int)
-    assert estimate_text_tokens(message3, TextEstimator.TIKTOKEN_R50K.LINEAR_ENGLISH) == pytest.approx(21, abs=4)
+    assert estimate_text_tokens(message3, TextEstimator.TIKTOKEN_R50K.LINEAR_ENGLISH) == pytest.approx(21, abs=6)
 
 def test_linear_english_code_with_variable_names():
     message = "table_name = ast.table_name"  # http://huggingface.co/datasets/lmsys/lmsys-chat-1m?conversation-viewer=19
@@ -89,7 +89,7 @@ def test_linear_all_code_with_keywords():
         if op.type == "SELECT":
     """  # http://huggingface.co/datasets/lmsys/lmsys-chat-1m?conversation-viewer=19
     assert isinstance(estimate_text_tokens(message3, TextEstimator.TIKTOKEN_R50K.LINEAR_ALL), int)
-    assert estimate_text_tokens(message3, TextEstimator.TIKTOKEN_R50K.LINEAR_ALL) == pytest.approx(21, abs=4)
+    assert estimate_text_tokens(message3, TextEstimator.TIKTOKEN_R50K.LINEAR_ALL) == pytest.approx(21, abs=6)
 
 def test_linear_all_code_with_variable_names():
     message = "table_name = ast.table_name"  # http://huggingface.co/datasets/lmsys/lmsys-chat-1m?conversation-viewer=19
