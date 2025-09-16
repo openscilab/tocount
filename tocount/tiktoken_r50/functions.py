@@ -3,7 +3,7 @@
 from ..params import LINEAR_MODELS
 
 def _linear_estimator(text: str, model: str = "English") -> int:
-    """A private helper function to perform the linear estimation."""
+    """Perform linear estimation."""
     params = LINEAR_MODELS[model]
     a = params["a"]
     b = params["b"]
