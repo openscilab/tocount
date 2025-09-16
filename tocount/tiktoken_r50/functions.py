@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Tocount functions."""
+"""TikToken R50K functions."""
 from ..params import LINEAR_MODELS
 
 def _linear_estimator(text: str, model: str = "English") -> int:
