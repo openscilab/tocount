@@ -19,8 +19,8 @@ class _TextEstimatorRuleBased(Enum):
 class _TextEstimatorTikTokenR50K(Enum):
     """TikToken R50K text token estimator enum."""
 
-    LINEAR_ALL = "TIKTOKEN R50K LINEAR ALL"
-    LINEAR_ENGLISH = "TIKTOKEN R50K LINEAR ENGLISH"
+    LINEAR_ALL = "TIKTOKEN_R50K_LINEAR_ALL"
+    LINEAR_ENGLISH = "TIKTOKEN_R50K_LINEAR_ENGLISH"
     DEFAULT = LINEAR_ENGLISH
 
 
