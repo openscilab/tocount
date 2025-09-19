@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""tocount functions."""
+"""Tocount functions."""
 from enum import Enum
-from .rule_based import universal_tokens_estimator
-from .rule_based import openai_tokens_estimator_gpt_3_5
-from .rule_based import openai_tokens_estimator_gpt_4
+
 from .params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
+from .rule_based.functions import universal_tokens_estimator, openai_tokens_estimator_gpt_3_5, openai_tokens_estimator_gpt_4
+from .tiktoken_r50.functions import linear_tokens_estimator_english, linear_tokens_estimator_all
 
 
 class _TextEstimatorRuleBased(Enum):
@@ -16,16 +16,29 @@ class _TextEstimatorRuleBased(Enum):
     DEFAULT = UNIVERSAL
 
 
+class _TextEstimatorTikTokenR50K(Enum):
+    """TikToken R50K text token estimator enum."""
+
+    LINEAR_ALL = "TIKTOKEN_R50K_LINEAR_ALL"
+    LINEAR_ENGLISH = "TIKTOKEN_R50K_LINEAR_ENGLISH"
+    DEFAULT = LINEAR_ENGLISH
+
+
 class TextEstimator:
     """Text token estimator class."""
 
     RULE_BASED = _TextEstimatorRuleBased
+    TIKTOKEN_R50K = _TextEstimatorTikTokenR50K
     DEFAULT = RULE_BASED.DEFAULT
 
 
-text_estimator_map = {TextEstimator.RULE_BASED.UNIVERSAL: universal_tokens_estimator,
-                      TextEstimator.RULE_BASED.GPT_3_5: openai_tokens_estimator_gpt_3_5,
-                      TextEstimator.RULE_BASED.GPT_4: openai_tokens_estimator_gpt_4}
+text_estimator_map = {
+    TextEstimator.RULE_BASED.UNIVERSAL: universal_tokens_estimator,
+    TextEstimator.RULE_BASED.GPT_3_5: openai_tokens_estimator_gpt_3_5,
+    TextEstimator.RULE_BASED.GPT_4: openai_tokens_estimator_gpt_4,
+    TextEstimator.TIKTOKEN_R50K.LINEAR_ALL: linear_tokens_estimator_all,
+    TextEstimator.TIKTOKEN_R50K.LINEAR_ENGLISH: linear_tokens_estimator_english,
+}
 
 
 def estimate_text_tokens(text: str, estimator: TextEstimator = TextEstimator.DEFAULT) -> int:
@@ -38,6 +51,6 @@ def estimate_text_tokens(text: str, estimator: TextEstimator = TextEstimator.DEF
     """
     if not isinstance(text, str):
         raise ValueError(INVALID_TEXT_MESSAGE)
-    if not isinstance(estimator, (TextEstimator, _TextEstimatorRuleBased)):
+    if not isinstance(estimator, (TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K)):
         raise ValueError(INVALID_TEXT_ESTIMATOR_MESSAGE)
     return text_estimator_map[estimator](text)
