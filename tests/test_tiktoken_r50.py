@@ -56,10 +56,6 @@ def test_linear_english_text_with_rare_character():
     assert isinstance(estimate_text_tokens(message, TextEstimator.TIKTOKEN_R50K.LINEAR_ENGLISH), int)
     assert estimate_text_tokens(message, TextEstimator.TIKTOKEN_R50K.LINEAR_ENGLISH) == pytest.approx(18, abs=6)
 
-
-###############################################################
-
-
 def test_linear_all_text_with_simple_prompt():
     message = "You are the text completion model"  # https://huggingface.co/datasets/lmsys/lmsys-chat-1m?conversation-viewer=2
     assert isinstance(estimate_text_tokens(message, TextEstimator.TIKTOKEN_R50K.LINEAR_ALL), int)
@@ -124,22 +120,3 @@ def test_linear_all_text_with_rare_character():
     message = "What is the smallest possible value for P[A ∩ B ∩ C]?" # https://huggingface.co/datasets/allenai/WildChat-1M?conversation-viewer=18
     assert isinstance(estimate_text_tokens(message, TextEstimator.TIKTOKEN_R50K.LINEAR_ALL), int)
     assert estimate_text_tokens(message, TextEstimator.TIKTOKEN_R50K.LINEAR_ALL) == pytest.approx(18, abs=2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
