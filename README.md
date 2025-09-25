@@ -64,6 +64,7 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 
 ### Rule-Based
 
+
 | Model Name                 |   MAE   |     MSE     |   R²   |
 |----------------------------|---------|-------------|--------|
 | `RULE_BASED.UNIVERSAL`     | 106.70  | 381,647.81  | 0.8175 |
