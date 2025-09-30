@@ -55,4 +55,3 @@ def estimate_text_tokens(text: str, estimator: TextEstimator = TextEstimator.DEF
     if not isinstance(estimator, (TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K)):
         raise ValueError(INVALID_TEXT_ESTIMATOR_MESSAGE)
     return text_estimator_map[estimator](text)
-  
