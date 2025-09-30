@@ -2,8 +2,14 @@
 """TikToken R50K functions."""
 from ..params import LINEAR_MODELS
 
-def _linear_estimator(text: str, model: str = "English") -> int:
-    """Perform linear estimation."""
+
+def _linear_estimator(text: str, model: str = "english") -> int:
+    """
+    Perform linear estimation.
+
+    :param text: input text
+    :param model: model name
+    """
     params = LINEAR_MODELS[model]
     a = params["a"]
     b = params["b"]
@@ -11,10 +17,20 @@ def _linear_estimator(text: str, model: str = "English") -> int:
     estimate = a * char_count + b
     return int(round(estimate))
 
+
 def linear_tokens_estimator_english(text: str) -> int:
-    """Linear token estimator for the 'English' model."""
+    """
+    Linear token estimator for the 'English' model.
+
+    :param text: input text
+    """
     return _linear_estimator(text, "english")
 
+
 def linear_tokens_estimator_all(text: str) -> int:
-    """Linear token estimator for the 'all' model."""
+    """
+    Linear token estimator for the 'all' model.
+
+    :param text: input text
+    """
     return _linear_estimator(text, "all")
