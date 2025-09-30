@@ -5,6 +5,7 @@
     <a href="https://codecov.io/gh/openscilab/tocount"><img src="https://codecov.io/gh/openscilab/tocount/branch/dev/graph/badge.svg?token=T9T0EPB3V2"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
     <a href="https://github.com/openscilab/tocount"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/tocount"></a>
+    <a href="https://discord.gg/X8ExzygDGf"><img src="https://img.shields.io/discord/1064533716615049236.svg" alt="Discord Channel"></a>
 </div>
 
 ----------
@@ -94,6 +95,12 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 Just fill an issue and describe it. We'll check it ASAP! or send an email to [tocount@openscilab.com](mailto:tocount@openscilab.com "tocount@openscilab.com"). 
 
 - Please complete the issue template
+
+You can also join our discord server
+
+<a href="https://discord.gg/X8ExzygDGf">
+  <img src="https://img.shields.io/discord/1064533716615049236.svg?style=for-the-badge" alt="Discord Channel">
+</a>
 
 ## References
 
