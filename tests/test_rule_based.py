@@ -144,4 +144,3 @@ def test_raises_error_for_invalid_estimator():
     invalid_estimator = "not a valid estimator"
     with pytest.raises(ValueError, match=INVALID_TEXT_ESTIMATOR_MESSAGE):
         estimate_text_tokens(valid_text, invalid_estimator)
-
