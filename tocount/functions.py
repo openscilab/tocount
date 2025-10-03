@@ -4,8 +4,8 @@ from enum import Enum
 
 from .params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
 from .rule_based.functions import universal_tokens_estimator, openai_tokens_estimator_gpt_3_5, openai_tokens_estimator_gpt_4
-from .tiktoken_r50.functions import linear_tokens_estimator_english, linear_tokens_estimator_all
-
+from .tiktoken_r50k.functions import linear_tokens_estimator_english as r50k_linear_english, linear_tokens_estimator_all as r50k_linear_all
+from .tiktoken_cl100k.functions import linear_tokens_estimator_english as cl100k_linear_english, linear_tokens_estimator_all as cl100k_linear_all
 
 class _TextEstimatorRuleBased(Enum):
     """Rule based text token estimator enum."""
@@ -24,11 +24,20 @@ class _TextEstimatorTikTokenR50K(Enum):
     DEFAULT = LINEAR_ENGLISH
 
 
+class _TextEstimatorTikTokenCL100K(Enum):
+    """TikToken cl100k text token estimator enum."""
+
+    LINEAR_ALL = "TIKTOKEN_CL100K_LINEAR_ALL"
+    LINEAR_ENGLISH = "TIKTOKEN_CL100K_LINEAR_ENGLISH"
+    DEFAULT = LINEAR_ENGLISH
+
+
 class TextEstimator:
     """Text token estimator class."""
 
     RULE_BASED = _TextEstimatorRuleBased
     TIKTOKEN_R50K = _TextEstimatorTikTokenR50K
+    TIKTOKEN_CL100K = _TextEstimatorTikTokenCL100K
     DEFAULT = RULE_BASED.DEFAULT
 
 
@@ -36,8 +45,10 @@ text_estimator_map = {
     TextEstimator.RULE_BASED.UNIVERSAL: universal_tokens_estimator,
     TextEstimator.RULE_BASED.GPT_3_5: openai_tokens_estimator_gpt_3_5,
     TextEstimator.RULE_BASED.GPT_4: openai_tokens_estimator_gpt_4,
-    TextEstimator.TIKTOKEN_R50K.LINEAR_ALL: linear_tokens_estimator_all,
-    TextEstimator.TIKTOKEN_R50K.LINEAR_ENGLISH: linear_tokens_estimator_english,
+    TextEstimator.TIKTOKEN_R50K.LINEAR_ALL: r50k_linear_all,
+    TextEstimator.TIKTOKEN_R50K.LINEAR_ENGLISH: r50k_linear_english,
+    TextEstimator.TIKTOKEN_CL100K.LINEAR_ALL: cl100k_linear_all,
+    TextEstimator.TIKTOKEN_CL100K.LINEAR_ENGLISH: cl100k_linear_english,
 }
 
 
@@ -51,7 +62,7 @@ def estimate_text_tokens(text: str, estimator: TextEstimator = TextEstimator.DEF
     """
     if not isinstance(text, str):
         raise ValueError(INVALID_TEXT_MESSAGE)
-    if not isinstance(estimator, (TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K)):
+    if not isinstance(estimator, (
+        TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K, _TextEstimatorTikTokenCL100K)):
         raise ValueError(INVALID_TEXT_ESTIMATOR_MESSAGE)
     return text_estimator_map[estimator](text)
-  
