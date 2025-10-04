@@ -20,7 +20,7 @@ def _linear_estimator(text: str, model: str = "english") -> int:
 
 def linear_tokens_estimator_english(text: str) -> int:
     """
-    Linear token estimator for the 'English' model.
+    Linear token estimator for the English text.
 
     :param text: input text
     """
@@ -29,7 +29,7 @@ def linear_tokens_estimator_english(text: str) -> int:
 
 def linear_tokens_estimator_all(text: str) -> int:
     """
-    Linear token estimator for the 'all' model.
+    Linear token estimator for all languages.
 
     :param text: input text
     """
