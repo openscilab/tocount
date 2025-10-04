@@ -4,9 +4,10 @@ from enum import Enum
 
 from .params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
 from .rule_based.functions import universal_tokens_estimator, openai_tokens_estimator_gpt_3_5, openai_tokens_estimator_gpt_4
-from .tiktoken_r50k.functions import linear_tokens_estimator_english as r50k_linear_english, linear_tokens_estimator_all as r50k_linear_all
-from .tiktoken_cl100k.functions import linear_tokens_estimator_english as cl100k_linear_english, linear_tokens_estimator_all as cl100k_linear_all
-
+from .tiktoken_r50k.functions import linear_tokens_estimator_all as r50k_linear_all
+from .tiktoken_r50k.functions import linear_tokens_estimator_english as r50k_linear_english
+from .tiktoken_cl100k.functions import linear_tokens_estimator_all as cl100k_linear_all
+from .tiktoken_cl100k.functions import linear_tokens_estimator_english as cl100k_linear_english
 class _TextEstimatorRuleBased(Enum):
     """Rule based text token estimator enum."""
 
