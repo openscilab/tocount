@@ -25,10 +25,14 @@ def _linear_estimator(text: str, model: str = "english") -> int:
     y_mean = output_scaler_params["mean"]
     y_scale = output_scaler_params["scale"]
 
+    a_scaled = a * (x_scale / y_scale)
+    b_scaled = ((b - y_mean) + (a * x_mean)) / y_scale
+
     char_count = len(text)
     scaled_char_count = (char_count - x_mean) / x_scale
-    scaled_estimate = a * scaled_char_count + b
+    scaled_estimate = a_scaled * scaled_char_count + b_scaled
     estimate = (scaled_estimate * y_scale) + y_mean
+
     return int(round(max(0, estimate)))
 
 
