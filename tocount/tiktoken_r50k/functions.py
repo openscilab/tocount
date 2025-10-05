@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """TikToken R50K functions."""
-from ..params import LINEAR_MODELS
+from ..params import TIKTOKEN_R50K_LINEAR_MODELS
 
 
 def _linear_estimator(text: str, model: str = "english") -> int:
@@ -10,7 +10,7 @@ def _linear_estimator(text: str, model: str = "english") -> int:
     :param text: input text
     :param model: model name
     """
-    params = LINEAR_MODELS[model]
+    params = TIKTOKEN_R50K_LINEAR_MODELS[model]
     a = params["a"]
     b = params["b"]
     char_count = len(text)
@@ -20,7 +20,7 @@ def _linear_estimator(text: str, model: str = "english") -> int:
 
 def linear_tokens_estimator_english(text: str) -> int:
     """
-    Linear token estimator for the 'English' model.
+    Linear token estimator for the English text.
 
     :param text: input text
     """
@@ -29,7 +29,7 @@ def linear_tokens_estimator_english(text: str) -> int:
 
 def linear_tokens_estimator_all(text: str) -> int:
     """
-    Linear token estimator for the 'all' model.
+    Linear token estimator for all languages.
 
     :param text: input text
     """
