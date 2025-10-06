@@ -10,30 +10,12 @@ def _linear_estimator(text: str, model: str = "english") -> int:
     :param text: input text
     :param model: model name
     """
-    params = TIKTOKEN_R50K_LINEAR_MODELS[model]
-
-    model_params = params["model"]
-    input_scaler_params = params["input_scaler"]
-    output_scaler_params = params["output_scaler"]
-
-    a = model_params["a"]
-    b = model_params["b"]
-
-    x_mean = input_scaler_params["mean"]
-    x_scale = input_scaler_params["scale"]
-
-    y_mean = output_scaler_params["mean"]
-    y_scale = output_scaler_params["scale"]
-
-    a_scaled = a * (x_scale / y_scale)
-    b_scaled = ((b - y_mean) + (a * x_mean)) / y_scale
-
+    params = TIKTOKEN_R50K_LINEAR_MODELS[model]["model"]
+    a = params["a"]
+    b = params["b"]
     char_count = len(text)
-    scaled_char_count = (char_count - x_mean) / x_scale
-    scaled_estimate = a_scaled * scaled_char_count + b_scaled
-    estimate = (scaled_estimate * y_scale) + y_mean
-
-    return int(round(max(0, estimate)))
+    estimate = a * char_count + b
+    return int(round(estimate))
 
 
 def linear_tokens_estimator_english(text: str) -> int:

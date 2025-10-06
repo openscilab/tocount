@@ -6,6 +6,12 @@ TOCOUNT_VERSION = "0.2"
 INVALID_TEXT_ESTIMATOR_MESSAGE = "Invalid value. `estimator` must be an instance of TextEstimator enum."
 INVALID_TEXT_MESSAGE = "Invalid value. `text` must be a string."
 
+# --- Model Parameters ---
+# The model coefficients ('a', 'b') are pre-scaled to operate directly on the
+# raw character count. They represent the simplified result of a full
+# StandardScaler pipeline, whose original parameters ('input_scaler',
+# 'output_scaler') are retained below for reproducibility.
+
 TIKTOKEN_R50K_LINEAR_MODELS = {
     "english": {
         "model": {"a": 0.22027472695240083, "b": 1.3098454987590542},
