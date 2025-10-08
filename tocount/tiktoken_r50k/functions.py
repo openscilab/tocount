@@ -10,7 +10,7 @@ def _linear_estimator(text: str, model: str = "english") -> int:
     :param text: input text
     :param model: model name
     """
-    params = TIKTOKEN_R50K_LINEAR_MODELS[model]
+    params = TIKTOKEN_R50K_LINEAR_MODELS[model]["coefficient"]
     a = params["a"]
     b = params["b"]
     char_count = len(text)
