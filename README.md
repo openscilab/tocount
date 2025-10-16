@@ -50,6 +50,13 @@ ToCount is a lightweight and extensible Python library for estimating token coun
             </td>
     </tr>
 </table>
+<table>
+    <tr> 
+        <td align="center">Code Quality</td>
+        <td align="center"><a href="https://www.codefactor.io/repository/github/openscilab/tocount"><img src="https://www.codefactor.io/repository/github/openscilab/tocount/badge" alt="CodeFactor"></a></td>
+        <td align="center"></td>
+    </tr>
+</table>
 
 
 ## Installation
