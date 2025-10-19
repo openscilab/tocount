@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `TIKTOKEN_O200K.LINEAR_ENGLISH` model
 ### Changed
 - `README.md` updated
+- `Python 3.14` added to `test.yml`
 ## [0.2] - 2025-10-02
 ### Added
 - `TIKTOKEN_R50K.LINEAR_ALL` model
