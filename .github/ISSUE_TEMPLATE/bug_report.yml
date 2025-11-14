@@ -68,6 +68,7 @@ body:
       label: Python version
       description: Which version of Python are you using?
       options:
+        - Python 3.14
         - Python 3.13
         - Python 3.12
         - Python 3.11
@@ -84,6 +85,7 @@ body:
       label: ToCount version
       description: Which version of ToCount are you using?
       options:
+        - ToCount 0.3
         - ToCount 0.2
         - ToCount 0.1
       default: 0
