@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.3] - 2025-10-21
+### Added
+- `TIKTOKEN_CL100K.LINEAR_ALL` model
+- `TIKTOKEN_CL100K.LINEAR_ENGLISH` model
+- `TIKTOKEN_O200K.LINEAR_ALL` model
+- `TIKTOKEN_O200K.LINEAR_ENGLISH` model
+### Changed
+- `README.md` updated
+- `Python 3.14` added to `test.yml`
 ## [0.2] - 2025-10-02
 ### Added
 - `TIKTOKEN_R50K.LINEAR_ALL` model
@@ -18,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `RULE_BASED.GPT_3_5` model
 
 
-[Unreleased]: https://github.com/openscilab/tocount/compare/v0.2...dev
+[Unreleased]: https://github.com/openscilab/tocount/compare/v0.3...dev
+[0.3]: https://github.com/openscilab/tocount/compare/v0.2...v0.3
 [0.2]: https://github.com/openscilab/tocount/compare/v0.1...v0.2
 [0.1]: https://github.com/openscilab/tocount/compare/8385d46...v0.1

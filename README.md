@@ -50,15 +50,22 @@ ToCount is a lightweight and extensible Python library for estimating token coun
             </td>
     </tr>
 </table>
+<table>
+    <tr> 
+        <td align="center">Code Quality</td>
+        <td align="center"><a href="https://www.codefactor.io/repository/github/openscilab/tocount"><img src="https://www.codefactor.io/repository/github/openscilab/tocount/badge" alt="CodeFactor"></a></td>
+        <td align="center"><a href="https://app.codacy.com/gh/openscilab/tocount/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/4083b065eacf4587b84b557a830ee423"></a></td>
+    </tr>
+</table>
 
 
 ## Installation
 
 ### PyPI
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)
-- Run `pip install tocount==0.2`
+- Run `pip install tocount==0.3`
 ### Source code
-- Download [Version 0.2](https://github.com/openscilab/tocount/archive/v0.2.zip) or [Latest Source](https://github.com/openscilab/tocount/archive/dev.zip)
+- Download [Version 0.3](https://github.com/openscilab/tocount/archive/v0.3.zip) or [Latest Source](https://github.com/openscilab/tocount/archive/dev.zip)
 - Run `pip install .`
 
 ## Models

@@ -32,14 +32,14 @@ setup(
     name='tocount',
     packages=[
         'tocount', ],
-    version='0.2',
+    version='0.3',
     description='ToCount: Lightweight Token Estimator',
     long_description=read_description(),
     long_description_content_type='text/markdown',
     author='ToCount Development Team',
     author_email='tocount@openscilab.com',
     url='https://github.com/openscilab/tocount',
-    download_url='https://github.com/openscilab/tocount/tarball/v0.2',
+    download_url='https://github.com/openscilab/tocount/tarball/v0.3',
     keywords="token tokenizer estimation llm ml nlp",
     project_urls={
             'Source': 'https://github.com/openscilab/tocount',
@@ -47,7 +47,7 @@ setup(
     install_requires=get_requires(),
     python_requires='>=3.7',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
         'Natural Language :: English',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
@@ -58,6 +58,7 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
         'Programming Language :: Python :: 3.13',
+        'Programming Language :: Python :: 3.14',
         'Intended Audience :: Developers',
         'Intended Audience :: Education',
         'Intended Audience :: End Users/Desktop',
