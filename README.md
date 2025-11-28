@@ -72,11 +72,11 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 
 ### Rule-Based
 
-| Model Name                 |   R²   |   MAE    |   RMSE    |
-|----------------------------|--------|----------|-----------|
-| `RULE_BASED.UNIVERSAL`     | 0.8175 |  106.70  |  617.78   |
-| `RULE_BASED.GPT_4`         | 0.7266 |  152.34  |  756.17   |
-| `RULE_BASED.GPT_3_5`       | 0.6878 |  161.93  |  808.04   |
+| Model Name                 |   R²   |   MAE    |   RMSE    |  MedAE  |   D²    |
+|----------------------------|--------|----------|-----------|---------|---------|
+| `RULE_BASED.UNIVERSAL`     | 0.8156 | 106.70   | 617.78    | 18      | 0.6377  |
+| `RULE_BASED.GPT_3_5`       | 0.7272 | 152.34   | 756.17    | 35      | 0.4828  |
+| `RULE_BASED.GPT_4`         | 0.6901 | 161.93   | 808.04    | 40      | 0.4502  |
 
 ### Tiktoken R50K
 
