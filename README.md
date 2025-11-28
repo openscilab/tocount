@@ -72,33 +72,33 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 
 ### Rule-Based
 
-
-| Model Name                 |   MAE   |     MSE     |   R²   |
-|----------------------------|---------|-------------|--------|
-| `RULE_BASED.UNIVERSAL`     | 106.70  | 381,647.81  | 0.8175 |
-| `RULE_BASED.GPT_4`         | 152.34  | 571,795.89  | 0.7266 |
-| `RULE_BASED.GPT_3_5`       | 161.93  | 652,923.59  | 0.6878 |
+| Model Name                 |   R²   |   MAE    |   RMSE    |
+|----------------------------|--------|----------|-----------|
+| `RULE_BASED.UNIVERSAL`     | 0.8175 |  106.70  |  617.78   |
+| `RULE_BASED.GPT_4`         | 0.7266 |  152.34  |  756.17   |
+| `RULE_BASED.GPT_3_5`       | 0.6878 |  161.93  |  808.04   |
 
 ### Tiktoken R50K
 
-| Model Name                          |   MAE   |     MSE     |   R²   |
-|-------------------------------------|---------|-------------|--------|
-| `TIKTOKEN_R50K.LINEAR_ALL`          |  71.38  |  183897.01  | 0.8941 |
-| `TIKTOKEN_R50K.LINEAR_ENGLISH`      |  23.35  |  14127.92   | 0.9887 |
+| Model Name                     |   R²   |   MAE    |   RMSE    |  MedAE  |   D²    |
+|--------------------------------|--------|----------|-----------|---------|---------|
+| `TIKTOKEN_R50K.LINEAR_ALL`     | 0.7334 |  152.39  |  733.40   | 28.55   | 0.4826  |
+| `TIKTOKEN_R50K.LINEAR_ENGLISH` | 0.8703 |  62.76   |  508.20   |  8.87   | 0.7287  |
 
 ### Tiktoken CL100K
 
-| Model Name                          |   MAE   |     MSE     |   R²   |
-|-------------------------------------|---------|-------------|--------|
-| `TIKTOKEN_CL100K.LINEAR_ALL`        |  41.85  |  47949.48   | 0.9545 |
-| `TIKTOKEN_CL100K.LINEAR_ENGLISH`    |  21.12  |  17597.20   | 0.9839 |
+| Model Name                       |   R²   |  MAE  |   RMSE    |  MedAE  |   D²    |
+|----------------------------------|--------|-------|-----------|---------|---------|
+| `TIKTOKEN_CL100K.LINEAR_ALL`     | 0.9127 | 64.09 |  298.02   | 15.73   | 0.6804  |
+| `TIKTOKEN_CL100K.LINEAR_ENGLISH` | 0.9711 | 27.43 |  185.07   |  6.34   | 0.8527  |
 
 ### Tiktoken O200K
 
-| Model Name                          |   MAE   |     MSE     |   R²   |
-|-------------------------------------|---------|-------------|--------|
-| `TIKTOKEN_O200K.LINEAR_ALL`         |  25.53  |  20195.32   | 0.9777 |
-| `TIKTOKEN_O200K.LINEAR_ENGLISH`     |  20.24  |  15887.99   | 0.9859 |
+| Model Name                       |   R²   |  MAE  |   RMSE    |  MedAE  |   D²    |
+|----------------------------------|--------|-------|-----------|---------|---------|
+| `TIKTOKEN_O200K.LINEAR_ALL`      | 0.9563 | 38.23 |  197.16   |  9.70   | 0.7818  |
+| `TIKTOKEN_O200K.LINEAR_ENGLISH`  | 0.9730 | 26.00 |  177.54   |  5.96   | 0.8581  |
+
 
 
 ℹ️ The training and testing dataset is taken from Lmsys-chat-1m [1] and Wildchat [2].
