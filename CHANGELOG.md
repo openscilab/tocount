@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Logo
+### Changed
+- `TIKTOKEN_CL100K.LINEAR_ALL` model updated
+- `TIKTOKEN_CL100K.LINEAR_ENGLISH` model updated
+- `TIKTOKEN_O200K.LINEAR_ALL` model updated
+- `TIKTOKEN_O200K.LINEAR_ENGLISH` model updated
+- `TIKTOKEN_R50K.LINEAR_ALL` model updated
+- `TIKTOKEN_R50K.LINEAR_ENGLISH` model updated
 ## [0.3] - 2025-10-21
 ### Added
 - `TIKTOKEN_CL100K.LINEAR_ALL` model
