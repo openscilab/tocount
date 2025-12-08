@@ -1,4 +1,5 @@
 <div align="center">
+    <img src="https://github.com/openscilab/tocount/raw/main/otherfiles/logo.png" alt="ToCount Logo" width="250">
     <h1>ToCount: Lightweight Token Estimator</h1>
     <br/>
     <a href="https://badge.fury.io/py/tocount"><img src="https://badge.fury.io/py/tocount.svg" alt="PyPI version"></a>
