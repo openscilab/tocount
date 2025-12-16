@@ -85,6 +85,7 @@ body:
       label: ToCount version
       description: Which version of ToCount are you using?
       options:
+        - ToCount 0.4
         - ToCount 0.3
         - ToCount 0.2
         - ToCount 0.1
