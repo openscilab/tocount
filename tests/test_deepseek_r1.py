@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-"""Tests for the Deepseek R1 token estimator."""
-
 import pytest
 from tocount import estimate_text_tokens, TextEstimator
 
