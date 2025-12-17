@@ -10,6 +10,8 @@ from .tiktoken_cl100k.functions import linear_tokens_estimator_all as cl100k_lin
 from .tiktoken_cl100k.functions import linear_tokens_estimator_english as cl100k_linear_english
 from .tiktoken_o200k.functions import linear_tokens_estimator_all as o200k_linear_all
 from .tiktoken_o200k.functions import linear_tokens_estimator_english as o200k_linear_english
+from .deepseek_r1.functions import linear_tokens_estimator_all as deepseek_r1_linear_all
+from .deepseek_r1.functions import linear_tokens_estimator_english as deepseek_r1_linear_english
 class _TextEstimatorRuleBased(Enum):
     """Rule based text token estimator enum."""
 
@@ -42,6 +44,12 @@ class _TextEstimatorTikTokenO200K(Enum):
     LINEAR_ENGLISH = "TIKTOKEN_O200K_LINEAR_ENGLISH"
     DEFAULT = LINEAR_ENGLISH
 
+class _TextEstimatorDeepseekR1(Enum):
+    """Deepseek R1 text token estimator enum."""
+
+    LINEAR_ALL = "DEEPSEEK_R1_LINEAR_ALL"
+    LINEAR_ENGLISH = "DEEPSEEK_R1_LINEAR_ENGLISH"
+    DEFAULT = LINEAR_ENGLISH
 
 class TextEstimator:
     """Text token estimator class."""
@@ -50,6 +58,7 @@ class TextEstimator:
     TIKTOKEN_R50K = _TextEstimatorTikTokenR50K
     TIKTOKEN_CL100K = _TextEstimatorTikTokenCL100K
     TIKTOKEN_O200K = _TextEstimatorTikTokenO200K
+    DEEPSEEK_R1 = _TextEstimatorDeepseekR1
     DEFAULT = RULE_BASED.DEFAULT
 
 
@@ -63,6 +72,8 @@ text_estimator_map = {
     TextEstimator.TIKTOKEN_CL100K.LINEAR_ENGLISH: cl100k_linear_english,
     TextEstimator.TIKTOKEN_O200K.LINEAR_ALL: o200k_linear_all,
     TextEstimator.TIKTOKEN_O200K.LINEAR_ENGLISH: o200k_linear_english,
+    TextEstimator.DEEPSEEK_R1.LINEAR_ALL: deepseek_r1_linear_all,
+    TextEstimator.DEEPSEEK_R1.LINEAR_ENGLISH: deepseek_r1_linear_english,
 }
 
 
@@ -77,6 +88,6 @@ def estimate_text_tokens(text: str, estimator: TextEstimator = TextEstimator.DEF
     if not isinstance(text, str):
         raise ValueError(INVALID_TEXT_MESSAGE)
     if not isinstance(estimator, (
-        TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K, _TextEstimatorTikTokenCL100K, _TextEstimatorTikTokenO200K)):
+        TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K, _TextEstimatorTikTokenCL100K, _TextEstimatorTikTokenO200K, _TextEstimatorDeepseekR1)):
         raise ValueError(INVALID_TEXT_ESTIMATOR_MESSAGE)
     return text_estimator_map[estimator](text)
