@@ -12,6 +12,8 @@ from .tiktoken_o200k.functions import linear_tokens_estimator_all as o200k_linea
 from .tiktoken_o200k.functions import linear_tokens_estimator_english as o200k_linear_english
 from .deepseek_r1.functions import linear_tokens_estimator_all as deepseek_r1_linear_all
 from .deepseek_r1.functions import linear_tokens_estimator_english as deepseek_r1_linear_english
+from .qwen_qwq.functions import linear_tokens_estimator_all as qwen_qwq_linear_all
+from .qwen_qwq.functions import linear_tokens_estimator_english as qwen_qwq_linear_english
 class _TextEstimatorRuleBased(Enum):
     """Rule based text token estimator enum."""
 
