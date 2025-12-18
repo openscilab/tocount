@@ -55,6 +55,7 @@ class _TextEstimatorDeepseekR1(Enum):
 
 class _TextEstimatorQwenQwQ(Enum):
     """Qwen QwQ text token estimator enum."""
+    
     LINEAR_ALL = "QWEN_QWQ_LINEAR_ALL"
     LINEAR_ENGLISH = "QWEN_QWQ_LINEAR_ENGLISH"
     DEFAULT = LINEAR_ENGLISH
