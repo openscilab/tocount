@@ -77,7 +77,7 @@ QWEN_QWQ_LINEAR_MODELS = {
     }
 }
 
-LLAMA3_1_LINEAR_MODELS = {
+LLAMA_3_1_LINEAR_MODELS = {
     "english": {
         "coefficient": {"a": 0.21155350051785710, "b": 3.51340318273720253},
         "input_scaler": {"mean": 944.83131738824351942, "scale": 5021.64260895033748966},

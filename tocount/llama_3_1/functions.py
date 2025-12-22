@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Llama 3.1 functions."""
-from ..params import LLAMA3_1_LINEAR_MODELS
+from ..params import LLAMA_3_1_LINEAR_MODELS
 
 def _linear_estimator(text: str, model: str = "english") -> int:
     """
@@ -9,7 +9,7 @@ def _linear_estimator(text: str, model: str = "english") -> int:
     :param text: input text
     :param model: model name
     """
-    params = LLAMA3_1_LINEAR_MODELS[model]["coefficient"]
+    params = LLAMA_3_1_LINEAR_MODELS[model]["coefficient"]
     a = params["a"]
     b = params["b"]
     char_count = len(text)

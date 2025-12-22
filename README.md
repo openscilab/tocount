@@ -118,8 +118,8 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 
 | Model Name                 |   R²   |  MAE  |   RMSE    |  MedAE  |   D²    |
 |----------------------------|--------|-------|-----------|---------|---------|
-| `LLAMA3_1.LINEAR_ALL`      | 0.9538 | 44.37 |  207.58   |  11.70  | 0.7578  |
-| `LLAMA3_1.LINEAR_ENGLISH`  | 0.9731 | 26.59 |  177.94   |  6.24   | 0.8564  |
+| `LLAMA_3_1.LINEAR_ALL`      | 0.9538 | 44.37 |  207.58   |  11.70  | 0.7578  |
+| `LLAMA_3_1.LINEAR_ENGLISH`  | 0.9731 | 26.59 |  177.94   |  6.24   | 0.8564  |
 
 
 
