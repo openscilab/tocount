@@ -64,9 +64,9 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 
 ### PyPI
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)
-- Run `pip install tocount==0.4`
+- Run `pip install tocount==0.5`
 ### Source code
-- Download [Version 0.4](https://github.com/openscilab/tocount/archive/v0.4.zip) or [Latest Source](https://github.com/openscilab/tocount/archive/dev.zip)
+- Download [Version 0.5](https://github.com/openscilab/tocount/archive/v0.5.zip) or [Latest Source](https://github.com/openscilab/tocount/archive/dev.zip)
 - Run `pip install .`
 
 ## Models
@@ -116,8 +116,8 @@ ToCount is a lightweight and extensible Python library for estimating token coun
 
 ### Llama 3.1
 
-| Model Name                 |   R²   |  MAE  |   RMSE    |  MedAE  |   D²    |
-|----------------------------|--------|-------|-----------|---------|---------|
+| Model Name                  |   R²   |  MAE  |   RMSE    |  MedAE  |   D²    |
+|-----------------------------|--------|-------|-----------|---------|---------|
 | `LLAMA_3_1.LINEAR_ALL`      | 0.9538 | 44.37 |  207.58   |  11.70  | 0.7578  |
 | `LLAMA_3_1.LINEAR_ENGLISH`  | 0.9731 | 26.59 |  177.94   |  6.24   | 0.8564  |
 
