@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.5] - 2026-01-02
+### Added
+- `DEEPSEEK_R1.LINEAR_ALL` model
+- `DEEPSEEK_R1.LINEAR_ENGLISH` model
+- `QWEN_QWQ.LINEAR_ALL` model
+- `QWEN_QWQ.LINEAR_ENGLISH` model
+- `LLAMA_3_1.LINEAR_ALL` model
+- `LLAMA_3_1.LINEAR_ENGLISH` model
+### Changed
+- `README.md` updated
 ## [0.4] - 2025-12-17
 ### Added
 - Logo
@@ -37,7 +47,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `RULE_BASED.GPT_3_5` model
 
 
-[Unreleased]: https://github.com/openscilab/tocount/compare/v0.4...dev
+[Unreleased]: https://github.com/openscilab/tocount/compare/v0.5...dev
+[0.5]: https://github.com/openscilab/tocount/compare/v0.4...v0.5
 [0.4]: https://github.com/openscilab/tocount/compare/v0.3...v0.4
 [0.3]: https://github.com/openscilab/tocount/compare/v0.2...v0.3
 [0.2]: https://github.com/openscilab/tocount/compare/v0.1...v0.2
