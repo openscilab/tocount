@@ -32,14 +32,14 @@ setup(
     name='tocount',
     packages=[
         'tocount', ],
-    version='0.4',
+    version='0.5',
     description='ToCount: Lightweight Token Estimator',
     long_description=read_description(),
     long_description_content_type='text/markdown',
     author='ToCount Development Team',
     author_email='tocount@openscilab.com',
     url='https://github.com/openscilab/tocount',
-    download_url='https://github.com/openscilab/tocount/tarball/v0.4',
+    download_url='https://github.com/openscilab/tocount/tarball/v0.5',
     keywords="token tokenizer estimation llm ml nlp",
     project_urls={
             'Source': 'https://github.com/openscilab/tocount',
