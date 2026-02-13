@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """Tocount functions."""
-from enum import Enum
-
 from .params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
+from .params import TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K
+from .params import _TextEstimatorTikTokenCL100K, _TextEstimatorTikTokenO200K
+from .params import _TextEstimatorDeepseekR1, _TextEstimatorQwenQwQ, _TextEstimatorLlama_3_1
 from .rule_based.functions import universal_tokens_estimator, openai_tokens_estimator_gpt_3_5, openai_tokens_estimator_gpt_4
 from .tiktoken_r50k.functions import linear_tokens_estimator_all as r50k_linear_all
 from .tiktoken_r50k.functions import linear_tokens_estimator_english as r50k_linear_english
@@ -16,70 +17,6 @@ from .qwen_qwq.functions import linear_tokens_estimator_all as qwen_qwq_linear_a
 from .qwen_qwq.functions import linear_tokens_estimator_english as qwen_qwq_linear_english
 from .llama_3_1.functions import linear_tokens_estimator_all as llama_3_1_linear_all
 from .llama_3_1.functions import linear_tokens_estimator_english as llama_3_1_linear_english
-class _TextEstimatorRuleBased(Enum):
-    """Rule based text token estimator enum."""
-
-    UNIVERSAL = "RULE BASED UNIVERSAL"
-    GPT_3_5 = "RULE BASED GPT 3.5"
-    GPT_4 = "RULE BASED GPT 4"
-    DEFAULT = UNIVERSAL
-
-
-class _TextEstimatorTikTokenR50K(Enum):
-    """TikToken R50K text token estimator enum."""
-
-    LINEAR_ALL = "TIKTOKEN_R50K_LINEAR_ALL"
-    LINEAR_ENGLISH = "TIKTOKEN_R50K_LINEAR_ENGLISH"
-    DEFAULT = LINEAR_ENGLISH
-
-
-class _TextEstimatorTikTokenCL100K(Enum):
-    """TikToken cl100k text token estimator enum."""
-
-    LINEAR_ALL = "TIKTOKEN_CL100K_LINEAR_ALL"
-    LINEAR_ENGLISH = "TIKTOKEN_CL100K_LINEAR_ENGLISH"
-    DEFAULT = LINEAR_ENGLISH
-
-
-class _TextEstimatorTikTokenO200K(Enum):
-    """TikToken o200k text token estimator enum."""
-
-    LINEAR_ALL = "TIKTOKEN_O200K_LINEAR_ALL"
-    LINEAR_ENGLISH = "TIKTOKEN_O200K_LINEAR_ENGLISH"
-    DEFAULT = LINEAR_ENGLISH
-
-class _TextEstimatorDeepseekR1(Enum):
-    """Deepseek R1 text token estimator enum."""
-
-    LINEAR_ALL = "DEEPSEEK_R1_LINEAR_ALL"
-    LINEAR_ENGLISH = "DEEPSEEK_R1_LINEAR_ENGLISH"
-    DEFAULT = LINEAR_ENGLISH
-
-class _TextEstimatorQwenQwQ(Enum):
-    """Qwen QwQ text token estimator enum."""
-    
-    LINEAR_ALL = "QWEN_QWQ_LINEAR_ALL"
-    LINEAR_ENGLISH = "QWEN_QWQ_LINEAR_ENGLISH"
-    DEFAULT = LINEAR_ENGLISH
-
-class _TextEstimatorLlama_3_1(Enum):
-    """Llama 3.1 text token estimator enum."""
-
-    LINEAR_ALL = "LLAMA_3_1_LINEAR_ALL"
-    LINEAR_ENGLISH = "LLAMA_3_1_LINEAR_ENGLISH"
-    DEFAULT = LINEAR_ENGLISH
-
-class TextEstimator:
-    """Text token estimator class."""
-
-    RULE_BASED = _TextEstimatorRuleBased
-    TIKTOKEN_R50K = _TextEstimatorTikTokenR50K
-    TIKTOKEN_CL100K = _TextEstimatorTikTokenCL100K
-    TIKTOKEN_O200K = _TextEstimatorTikTokenO200K
-    DEEPSEEK_R1 = _TextEstimatorDeepseekR1
-    QWEN_QWQ = _TextEstimatorQwenQwQ
-    LLAMA_3_1 = _TextEstimatorLlama_3_1
-    DEFAULT = RULE_BASED.DEFAULT
 
 
 text_estimator_map = {

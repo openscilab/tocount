@@ -1,10 +1,76 @@
 # -*- coding: utf-8 -*-
 """Tocount parameters and constants."""
+from enum import Enum
 
 TOCOUNT_VERSION = "0.5"
 
 INVALID_TEXT_ESTIMATOR_MESSAGE = "Invalid value. `estimator` must be an instance of TextEstimator enum."
 INVALID_TEXT_MESSAGE = "Invalid value. `text` must be a string."
+
+class _TextEstimatorRuleBased(Enum):
+    """Rule based text token estimator enum."""
+
+    UNIVERSAL = "RULE BASED UNIVERSAL"
+    GPT_3_5 = "RULE BASED GPT 3.5"
+    GPT_4 = "RULE BASED GPT 4"
+    DEFAULT = UNIVERSAL
+
+
+class _TextEstimatorTikTokenR50K(Enum):
+    """TikToken R50K text token estimator enum."""
+
+    LINEAR_ALL = "TIKTOKEN_R50K_LINEAR_ALL"
+    LINEAR_ENGLISH = "TIKTOKEN_R50K_LINEAR_ENGLISH"
+    DEFAULT = LINEAR_ENGLISH
+
+
+class _TextEstimatorTikTokenCL100K(Enum):
+    """TikToken cl100k text token estimator enum."""
+
+    LINEAR_ALL = "TIKTOKEN_CL100K_LINEAR_ALL"
+    LINEAR_ENGLISH = "TIKTOKEN_CL100K_LINEAR_ENGLISH"
+    DEFAULT = LINEAR_ENGLISH
+
+
+class _TextEstimatorTikTokenO200K(Enum):
+    """TikToken o200k text token estimator enum."""
+
+    LINEAR_ALL = "TIKTOKEN_O200K_LINEAR_ALL"
+    LINEAR_ENGLISH = "TIKTOKEN_O200K_LINEAR_ENGLISH"
+    DEFAULT = LINEAR_ENGLISH
+
+class _TextEstimatorDeepseekR1(Enum):
+    """Deepseek R1 text token estimator enum."""
+
+    LINEAR_ALL = "DEEPSEEK_R1_LINEAR_ALL"
+    LINEAR_ENGLISH = "DEEPSEEK_R1_LINEAR_ENGLISH"
+    DEFAULT = LINEAR_ENGLISH
+
+class _TextEstimatorQwenQwQ(Enum):
+    """Qwen QwQ text token estimator enum."""
+    
+    LINEAR_ALL = "QWEN_QWQ_LINEAR_ALL"
+    LINEAR_ENGLISH = "QWEN_QWQ_LINEAR_ENGLISH"
+    DEFAULT = LINEAR_ENGLISH
+
+class _TextEstimatorLlama_3_1(Enum):
+    """Llama 3.1 text token estimator enum."""
+
+    LINEAR_ALL = "LLAMA_3_1_LINEAR_ALL"
+    LINEAR_ENGLISH = "LLAMA_3_1_LINEAR_ENGLISH"
+    DEFAULT = LINEAR_ENGLISH
+
+class TextEstimator:
+    """Text token estimator class."""
+
+    RULE_BASED = _TextEstimatorRuleBased
+    TIKTOKEN_R50K = _TextEstimatorTikTokenR50K
+    TIKTOKEN_CL100K = _TextEstimatorTikTokenCL100K
+    TIKTOKEN_O200K = _TextEstimatorTikTokenO200K
+    DEEPSEEK_R1 = _TextEstimatorDeepseekR1
+    QWEN_QWQ = _TextEstimatorQwenQwQ
+    LLAMA_3_1 = _TextEstimatorLlama_3_1
+    DEFAULT = RULE_BASED.DEFAULT
 
 # --- Model Parameters ---
 # The model coefficients ('a', 'b') are pre-scaled to operate directly on the
