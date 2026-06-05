@@ -10,6 +10,7 @@
 # Other Contributors
 ----------
 - [@boreshnavard](https://github.com/boreshnavard) ++
+- [@Kaylebor](https://github.com/Kaylebor)
 
 ++ Graphic designer
 

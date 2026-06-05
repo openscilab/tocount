@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 """Setup module."""
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup, find_packages
 
 
 def get_requires() -> list:
@@ -30,8 +27,7 @@ def read_description() -> str:
 
 setup(
     name='tocount',
-    packages=[
-        'tocount', ],
+    packages=find_packages(include=["tocount*"]),
     version='0.5',
     description='ToCount: Lightweight Token Estimator',
     long_description=read_description(),
