@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Setup module."""
-from setuptools import setup, find_package
+from setuptools import setup, find_packages
 
 
 def get_requires() -> list:
