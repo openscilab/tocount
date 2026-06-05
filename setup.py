@@ -27,7 +27,7 @@ def read_description() -> str:
 
 setup(
     name='tocount',
-    packages=find_packages(include=["tocount.*"]),
+    packages=find_packages(include=["tocount*"]),
     version='0.5',
     description='ToCount: Lightweight Token Estimator',
     long_description=read_description(),
