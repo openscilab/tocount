@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Setup module."""
-from setuptools import setup
+from setuptools import setup, find_package
 
 
 def get_requires() -> list:
@@ -27,16 +27,7 @@ def read_description() -> str:
 
 setup(
     name='tocount',
-    packages=[
-        'tocount',
-        'tocount.deepseek_r1',
-        'tocount.llama_3_1',
-        'tocount.qwen_qwq',
-        'tocount.rule_based',
-        'tocount.tiktoken_cl100k',
-        'tocount.tiktoken_o200k',
-        'tocount.tiktoken_r50k',
-    ],
+    packages=find_packages(include=["tocount.*"]),
     version='0.5',
     description='ToCount: Lightweight Token Estimator',
     long_description=read_description(),
