@@ -1,5 +1,6 @@
 import pytest
 from tocount import estimate_text_tokens, TextEstimator
+from tocount import TocountValidationError
 from tocount.params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
 
 
@@ -135,12 +136,12 @@ def test_openai_gpt_4_text_with_non_english():
 
 def test_raises_error_for_invalid_text():
     invalid_text = 12345
-    with pytest.raises(ValueError, match=INVALID_TEXT_MESSAGE):
+    with pytest.raises(TocountValidationError, match=INVALID_TEXT_MESSAGE):
         estimate_text_tokens(invalid_text)
 
 
 def test_raises_error_for_invalid_estimator():
     valid_text = "sample prompt"
     invalid_estimator = "not a valid estimator"
-    with pytest.raises(ValueError, match=INVALID_TEXT_ESTIMATOR_MESSAGE):
+    with pytest.raises(TocountValidationError, match=INVALID_TEXT_ESTIMATOR_MESSAGE):
         estimate_text_tokens(valid_text, invalid_estimator)
