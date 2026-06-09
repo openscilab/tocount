@@ -4,6 +4,7 @@ from .params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
 from .params import TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K
 from .params import _TextEstimatorTikTokenCL100K, _TextEstimatorTikTokenO200K
 from .params import _TextEstimatorDeepseekR1, _TextEstimatorQwenQwQ, _TextEstimatorLlama_3_1
+from .errors import TocountValidationError
 from .rule_based.functions import universal_tokens_estimator, openai_tokens_estimator_gpt_3_5, openai_tokens_estimator_gpt_4
 from .tiktoken_r50k.functions import linear_tokens_estimator_all as r50k_linear_all
 from .tiktoken_r50k.functions import linear_tokens_estimator_english as r50k_linear_english
@@ -47,7 +48,7 @@ def estimate_text_tokens(text: str, estimator: TextEstimator = TextEstimator.DEF
     :return: tokens number
     """
     if not isinstance(text, str):
-        raise ValueError(INVALID_TEXT_MESSAGE)
+        raise TocountValidationError(INVALID_TEXT_MESSAGE)
     if not isinstance(estimator, (TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K, _TextEstimatorTikTokenCL100K, _TextEstimatorTikTokenO200K, _TextEstimatorDeepseekR1, _TextEstimatorQwenQwQ, _TextEstimatorLlama_3_1)):
-        raise ValueError(INVALID_TEXT_ESTIMATOR_MESSAGE)
+        raise TocountValidationError(INVALID_TEXT_ESTIMATOR_MESSAGE)
     return text_estimator_map[estimator](text)
