@@ -2,13 +2,6 @@
 """Setup module."""
 from setuptools import setup, find_packages
 
-
-def get_requires() -> list:
-    """Read requirements.txt."""
-    requirements = open("requirements.txt", "r").read()
-    return list(filter(lambda x: x != "", requirements.split()))
-
-
 def read_description() -> str:
     """Read README.md and CHANGELOG.md."""
     try:
@@ -27,7 +20,7 @@ def read_description() -> str:
 
 setup(
     name='tocount',
-    packages=find_packages(include=["tocount*"]),
+    packages=find_packages(include=['tocount*']),
     version='0.5',
     description='ToCount: Lightweight Token Estimator',
     long_description=read_description(),
@@ -36,11 +29,11 @@ setup(
     author_email='tocount@openscilab.com',
     url='https://github.com/openscilab/tocount',
     download_url='https://github.com/openscilab/tocount/tarball/v0.5',
-    keywords="token tokenizer estimation llm ml nlp",
+    keywords='token tokenizer estimation llm ml nlp',
     project_urls={
             'Source': 'https://github.com/openscilab/tocount',
     },
-    install_requires=get_requires(),
+    install_requires=[],
     python_requires='>=3.7',
     classifiers=[
         'Development Status :: 3 - Alpha',
