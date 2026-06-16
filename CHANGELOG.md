@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `TocountValidationError` class
 ### Changed
 - `setup.py` updated
+- Test system modified
 - Dependencies structure modified
 ## [0.5] - 2026-01-02
 ### Added
