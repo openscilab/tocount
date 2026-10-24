@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `setup.py` updated
 - Test system modified
 - Dependencies structure modified
+- Build system modified
 - `Python 3.15` added to `test.yml`
 ## [0.5] - 2026-01-02
 ### Added
