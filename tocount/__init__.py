@@ -3,7 +3,7 @@
 
 from .params import TOCOUNT_VERSION, TextEstimator
 from .errors import TocountError, TocountValidationError
-from .functions import estimate_text_tokens
+from .core import estimate_text_tokens
 __version__ = TOCOUNT_VERSION
 
 __all__ = ["TextEstimator", "estimate_text_tokens", "TocountError", "TocountValidationError"]
