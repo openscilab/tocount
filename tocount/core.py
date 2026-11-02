@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Tocount functions."""
+"""Tocount core."""
 from .params import INVALID_TEXT_MESSAGE, INVALID_TEXT_ESTIMATOR_MESSAGE
 from .params import TextEstimator, _TextEstimatorRuleBased, _TextEstimatorTikTokenR50K
 from .params import _TextEstimatorTikTokenCL100K, _TextEstimatorTikTokenO200K
